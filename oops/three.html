@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Color
+        {
+            constructor(model)
+            {
+                this.model=model;
+            }
+        }
+        class Shape extends Color
+        {
+            constructor(model,company)
+            {
+                super(model);
+                this.company=company;
+            }
+            getinfo()
+            {
+                console.log(`model : ${super.model} company :${this.company}`)
+            }
+        }
+        class Colorshape extends Shape
+        {
+            constructor(model,company,year)
+            {
+                super(model,company);
+                this.year=year;
+            }
+            getinfo()
+            {
+                console.log(`model : ${super.model} company :${super.company} year:${this.year}`)
+            }
+        }
+
+
+        let obj= new Colorshape('red',5,2005);
+        console.log(obj); 
+
+
+    </script>
+</body>
+</html>
